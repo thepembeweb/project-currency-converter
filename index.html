@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+          
+        <div class="control-group">
+          <h1>Currency Converter</h1>
+          <div class="select">
+            <select id="inputCurrency">
+            </select>
+            <div class="select__arrow"></div>
+          </div>
+          <div class="select">
+            <select id="outputCurrency">
+            </select>
+            <div class="select__arrow"></div>
+          </div>
+        </div>
+
+        <div class="control-group">
+            <h1><span id="inputCurrencyLabel">&nbsp;</span></h1>
+            <div class="input">
+                <input id="inputAmount" 
+                       type="number" 
+                       placeholder="0.00" 
+                       required 
+                       name="inputAmount" 
+                       min="0" 
+                       value="0" 
+                       step="0.01" 
+                       title="Currency" 
+                       pattern="^\d+(?:\.\d{1,2})?$" 
+                       onblur="this.style.borderColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
+            </div>
+            <button class="button" onclick="calculateCurrency(); return false;"><span>Convert </span></button>
+          </div>
+          <div class="control-group">
+            <h1><span id="resultCurrencyLabel">&nbsp;</span></h1>
+            <h2 class="result-currency"><span id="resultCurrency">0.00</span></h2>
+          </div>
+
+
+      </div>
+    <script src="app.js"></script>
+</body>
+</html>
