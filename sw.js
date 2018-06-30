@@ -1,4 +1,4 @@
-const cacheName = "alcCurrConvPWA-v1";
+const cacheName = "ALCCurrencyConverterPWA-v1";
 const filesToCache = [
     "index.html",
     "app.js",
